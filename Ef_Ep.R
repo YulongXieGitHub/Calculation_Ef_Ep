@@ -2,6 +2,8 @@
 #
 # October 6th, 2016: start preparation of material file for BaBrCl and BaBrI for Venture project.
 #
+# Test the pull/push from load repository to remote repository on GitHub
+#
 # Based on the formula in Fei Gao's manuscript "GaoFei_manuscripts.pdf"
 #
 # 1. unit conversion
