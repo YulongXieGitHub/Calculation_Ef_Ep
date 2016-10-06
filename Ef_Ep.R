@@ -89,6 +89,7 @@ Ep <- ((16/3)*chi.square)^(1/2) * Ef
 OUT <- cbind(d,M,no.val,ruo,term3, R,chi.square,Ef,Ep)
 
 FL.OUT <- "Ef_Ep_Calculated.csv"
+if(file.exists(FL.OUT)){print(paste(FL.OUT,"exist.Delete it!"));file.remove(FL.OUT)}
 cat(paste("Ef and Ep,",sep=""),file=FL.OUT,append=TRUE)
 write.table(OUT,file=FL.OUT,sep=",",row.names=TRUE,col.names=TRUE,append=TRUE)
 
