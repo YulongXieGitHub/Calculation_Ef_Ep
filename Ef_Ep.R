@@ -1,5 +1,7 @@
 # Ef_Ep.R
 #
+# October 6th, 2016: start preparation of material file for BaBrCl and BaBrI for Venture project.
+#
 # Based on the formula in Fei Gao's manuscript "GaoFei_manuscripts.pdf"
 #
 # 1. unit conversion
@@ -29,24 +31,32 @@ mc2.eV     <- mc2.J * J_2_eV		# mc2 in eV
 
 
 
-
+# https://materialsproject.org 
+# http://www.osti.gov/scitech/biblio/1202176
+# https://materialsproject.org/: BaBrCl: band gap: 4.929eV and density 3.944 gm/cc)
+# PACS number 71.15 Qe BaBrI band gap: 5.39 eV
+# NIM 613A, 95-97(2010) density of BaBrI 5.18g/cm3
+# number of valence electrons:
+# BaBrI/BaBrCl: Ba: 2, Br: 7, I/Cl:  7 = 16 
+# Molecular weights: BaBrI: Ba: 137.327, Br: 79.904 I: 126.90447 Cl: 35.45 BaBrI: 344.1355 and BaBrCl: 252.681
+#
 # band gap (eV)
-      Eg  <- c(-999,  -999,  -999,  -999,  5.6,    6.1,  11.,   11.8,  5.9, -999,   1.57, 4.5,    4.56, 5.5,  3.97 )
-names(Eg) <- c("SiO2","Ge",  "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2", "YAG","YAP","Stilbene")
+      Eg  <- c(-999,  -999,  -999,  -999,  5.6,    6.1,  11.,   11.8,  5.9, -999,   1.57, 4.5,    4.56, 5.5,  3.97,      5.39,   4.929 )
+names(Eg) <- c("SiO2","Ge",  "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2", "YAG","YAP","Stilbene","BaBrI","BaBrCl")
 
 # material density in g/cm3
-      d  <- c(2.32,   5.323, 2.33, 5.31,  5.29,   4.51, 4.89,  3.186, 3.667,3.827, 5.81, 4.549,  4.56, 5.5,  0.9707)
-names(d) <- c("SiO2","Ge",  "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2", "YAG","YAP","Stilbene")
+      d  <- c(2.32,   5.323, 2.33, 5.31,  5.29,   4.51, 4.89,  3.186, 3.667,3.827, 5.81, 4.549,  4.56, 5.5,  0.9707,    5.18,   3.944)
+names(d) <- c("SiO2","Ge",  "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2", "YAG","YAP","Stilbene","BaBrI","BaBrCl")
 
 # number of valence electron: YAG, molecular formula: Y3Al5O12.  Y (Z=39, 3 valence electron, Al (Z=13, 3 valence electron, O: (Z=16, 6 valence electron: no.val.elec = 3*3 + 3 * 5 + 6 * 12 = 9+15+72 = 96
 #                             YAP, molecular formula: YAlO3.                                                                                              no.val.elec = 3 + 3 + 18 = 24
 # Number of valence electron in Stilbene: 7 double covalent band and 8 single covalent band: total electrons = 7 * 4 + 8 * 2 = 28 + 16 = 44
-      no.val  <- c( 16,    4,    4,    8,     24,     8,    16,    16,    8,    8,     30,   16,    96,   24,  44) 
-names(no.val) <- c("SiO2","Ge", "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2","YAG","YAP","Stilbene")
+      no.val  <- c( 16,    4,    4,    8,     24,     8,    16,    16,    8,    8,     30,   16,    96,   24,  44,         16,     16) 
+names(no.val) <- c("SiO2","Ge", "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2","YAG","YAP","Stilbene","BaBrI","BaBrCl")
 
 # molecular weight (g/mol): http://www.convertunits.com/molarmass
-      M  <- c( 60.0843,72.64, 28.0855,144.6446, 378.6175, 259.80992,175.3238064,78.0748064, 149.894244, 100.7255,305.42, 341.42894, 593.61804,163.885588,180.25)
-names(M) <- c("SiO2",  "Ge",  "Si",   "GaAs",   "LaBr3",  "CsI",    "BaF2",     "CaF2",     "NaI",      "SiGe",  "CZT",  "SrI2",    "YAG",    "YAP",    "Stilbene")
+      M  <- c( 60.0843,72.64, 28.0855,144.6446, 378.6175, 259.80992,175.3238064,78.0748064, 149.894244, 100.7255,305.42, 341.42894, 593.61804,163.885588,180.25,    344.1355, 252.681)
+names(M) <- c("SiO2",  "Ge",  "Si",   "GaAs",   "LaBr3",  "CsI",    "BaF2",     "CaF2",     "NaI",      "SiGe",  "CZT",  "SrI2",    "YAG",    "YAP",    "Stilbene","BaBrI",  "BaBrCl")
 
 # page 40:
 # ruo =  no.val * density * Avogadro Number / molecular Weight
