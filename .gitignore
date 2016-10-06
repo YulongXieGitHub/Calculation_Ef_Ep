@@ -1,6 +1,5 @@
 # exclude executible files, pdf file, excel file
 *.exe
-*.xlsx
 *.pdf
 *.jpeg
 *.png
