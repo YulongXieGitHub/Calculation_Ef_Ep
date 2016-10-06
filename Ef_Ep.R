@@ -1,5 +1,8 @@
 # Ef_Ep.R
 #
+# Oct 6th, 2016: Sebastien forwarded the band gap from Andrew Canning:
+# BaBrCl: 7.3 (exp) 7.3 (GW)
+# BaBrI:  5.3 (exp) 5.39 (GW)
 # October 6th, 2016: start preparation of material file for BaBrCl and BaBrI for Venture project.
 #
 # Test the pull/push from load repository to remote repository on GitHub
@@ -43,7 +46,7 @@ mc2.eV     <- mc2.J * J_2_eV		# mc2 in eV
 # Molecular weights: BaBrI: Ba: 137.327, Br: 79.904 I: 126.90447 Cl: 35.45 BaBrI: 344.1355 and BaBrCl: 252.681
 #
 # band gap (eV)
-      Eg  <- c(-999,  -999,  -999,  -999,  5.6,    6.1,  11.,   11.8,  5.9, -999,   1.57, 4.5,    4.56, 5.5,  3.97,      5.39,   4.929 )
+      Eg  <- c(-999,  -999,  -999,  -999,  5.6,    6.1,  11.,   11.8,  5.9, -999,   1.57, 4.5,    4.56, 5.5,  3.97,      5.39,   7.3 )
 names(Eg) <- c("SiO2","Ge",  "Si" ,"GaAs","LaBr3","CsI","BaF2","CaF2","NaI","SiGe","CZT","SrI2", "YAG","YAP","Stilbene","BaBrI","BaBrCl")
 
 # material density in g/cm3
