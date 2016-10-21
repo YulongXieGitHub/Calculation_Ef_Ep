@@ -4,4 +4,6 @@
 *.jpeg
 *.png
 *.log
-
+.Rdata
+.Rhistory
+.gitignore
